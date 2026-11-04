@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>권용욱 | Marketing Business Leader</title>
+<!-- 지원용 별도 페이지: 검색 노출 막음. sitemap.xml에도 넣지 않음 -->
+<meta name="robots" content="noindex, nofollow">
+<meta name="description" content="권용욱(Kwon Yongwook) — 더에스엠씨 마케팅부문 리더 포지션 지원용 포트폴리오">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&family=Bebas+Neue&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --red:#E5001B; --dark:#0D0D0D; --surface:#161616; --surface2:#1A1A1A;
+    --border:rgba(255,255,255,0.09); --text:#F0F0F0;
+    --muted:rgba(255,255,255,0.6); --dim:rgba(255,255,255,0.38);
+    --red-lt:rgba(229,0,27,0.12); --red-md:rgba(229,0,27,0.35);
+    --display:'Bebas Neue',sans-serif; --body:'Noto Sans KR',sans-serif;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;} html{scroll-behavior:smooth;}
+  body{background:var(--dark);color:var(--text);font-family:var(--body);font-size:15px;line-height:1.7;-webkit-font-smoothing:antialiased;overflow-x:hidden;word-break:keep-all;}
+  a{color:inherit;}
+
+  nav{position:fixed;top:0;left:0;right:0;z-index:200;height:60px;background:rgba(13,13,13,0.94);backdrop-filter:blur(20px);border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;padding:0 5vw;}
+  .nav-logo{font-family:var(--display);font-size:22px;letter-spacing:0.04em;text-decoration:none;}
+  .nav-logo span{color:var(--red);}
+  .nav-links{display:flex;gap:1.5rem;list-style:none;align-items:center;}
+  .nav-links a{font-size:12px;font-weight:500;color:var(--muted);text-decoration:none;letter-spacing:0.08em;transition:color .2s;}
+  .nav-links a:hover{color:var(--text);}
+  .nav-cta{background:var(--red-lt);border:1px solid var(--red-md);color:var(--red)!important;padding:5px 12px;border-radius:3px;font-size:11px!important;font-weight:700!important;}
+
+  /* HERO */
+  .hero{min-height:100vh;padding-top:60px;display:grid;grid-template-columns:58% 42%;position:relative;overflow:hidden;}
+  .hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 55% 65% at 100% 50%,rgba(229,0,27,0.1) 0%,transparent 70%);pointer-events:none;}
+  .hero-left{display:flex;flex-direction:column;justify-content:center;padding:4.5rem 3rem 4.5rem 6vw;position:relative;z-index:2;}
+  .hero-badge{display:inline-flex;align-items:center;gap:8px;background:var(--red-lt);border:1px solid rgba(229,0,27,0.4);border-radius:3px;padding:5px 14px;font-size:11px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--red);margin-bottom:1.6rem;width:fit-content;}
+  .hero-lead{font-size:clamp(1.25rem,2.3vw,1.85rem);font-weight:700;line-height:1.45;letter-spacing:-0.02em;margin-bottom:1.4rem;max-width:620px;}
+  .hero-lead em{font-style:normal;color:var(--red);}
+  .hero-name{font-family:var(--display);font-size:clamp(2.4rem,4.4vw,3.8rem);line-height:1;letter-spacing:0.03em;margin-bottom:0.3rem;}
+  .hero-name small{font-family:var(--body);font-size:0.38em;font-weight:700;letter-spacing:0.25em;color:var(--muted);margin-left:0.6rem;vertical-align:middle;}
+  .hero-role{font-size:13px;color:var(--muted);margin-bottom:1.4rem;}
+  .hero-desc{font-size:14px;color:rgba(255,255,255,0.66);max-width:560px;line-height:1.9;margin-bottom:2rem;}
+  .hero-desc strong{color:var(--text);font-weight:700;border-bottom:2px solid var(--red);}
+  .hero-stats{display:flex;flex-wrap:wrap;gap:1.4rem 2.4rem;margin-bottom:2.2rem;}
+  .stat-num{font-family:var(--display);font-size:2.5rem;line-height:1;}
+  .stat-num span{color:var(--red);}
+  .stat-label{display:block;font-size:10.5px;color:var(--muted);letter-spacing:0.06em;margin-top:4px;}
+  .btn-row{display:flex;gap:10px;flex-wrap:wrap;}
+  .btn{display:inline-flex;align-items:center;gap:8px;border:1px solid rgba(255,255,255,0.18);color:rgba(255,255,255,0.78);text-decoration:none;padding:9px 18px;border-radius:3px;font-size:12px;font-weight:600;letter-spacing:0.04em;transition:border-color .2s,color .2s;}
+  .btn:hover{border-color:var(--red);color:var(--red);}
+  .btn.primary{background:var(--red);border-color:var(--red);color:#fff;}
+  .btn.primary:hover{background:#cc0018;color:#fff;}
+  .hero-right{position:relative;overflow:hidden;}
+  .hero-photo{position:absolute;inset:0;height:100%;width:100%;object-fit:cover;object-position:50% 34%;mix-blend-mode:luminosity;opacity:0.85;filter:brightness(0.93) contrast(1.07) grayscale(0.1);}
+  .hero-overlay{position:absolute;inset:0;background:linear-gradient(to right,var(--dark) 0%,transparent 30%),linear-gradient(to top,var(--dark) 0%,transparent 18%),linear-gradient(to bottom,var(--dark) 0%,transparent 12%);}
+
+  /* COMMON */
+  section{padding:80px 6vw;}
+  section.alt{background:var(--surface);}
+  .label{font-size:11px;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:var(--red);display:block;margin-bottom:0.5rem;}
+  .title{font-size:clamp(1.5rem,2.6vw,2.1rem);font-weight:900;letter-spacing:-0.03em;line-height:1.3;margin-bottom:0.7rem;}
+  .intro{color:var(--muted);font-size:14px;max-width:760px;line-height:1.85;}
+  .intro strong{color:var(--text);}
+
+  /* ROLE FIT */
+  .fit{margin-top:2.4rem;border-top:1px solid var(--border);}
+  .fit-row{display:grid;grid-template-columns:44px 1fr 1.55fr;gap:1.6rem;padding:1.6rem 0;border-bottom:1px solid var(--border);align-items:start;}
+  .fit-num{font-family:var(--display);font-size:2rem;color:rgba(229,0,27,0.45);line-height:1;}
+  .fit-req{font-size:14.5px;font-weight:700;line-height:1.6;}
+  .fit-req small{display:block;font-size:10.5px;font-weight:700;letter-spacing:0.12em;color:var(--dim);text-transform:uppercase;margin-bottom:4px;}
+  .fit-proof{font-size:13.5px;color:rgba(255,255,255,0.72);line-height:1.85;}
+  .fit-proof b{color:var(--text);}
+  .fit-proof .tag{display:inline-block;font-size:10.5px;font-weight:700;color:var(--red);background:var(--red-lt);border-radius:2px;padding:1px 7px;margin:0 4px 0 0;}
+
+  /* AI x MARKETING */
+  .thesis{margin-top:2.2rem;display:grid;grid-template-columns:1fr 1fr 1fr;gap:1px;background:var(--border);border:1px solid var(--border);}
+  .thesis-step{background:var(--surface2);padding:1.7rem 1.6rem;position:relative;}
+  .thesis-step .k{font-family:var(--display);font-size:1.25rem;letter-spacing:0.06em;color:var(--red);}
+  .thesis-step h3{font-size:15px;font-weight:700;margin:0.3rem 0 0.5rem;}
+  .thesis-step p{font-size:13px;color:var(--muted);line-height:1.8;}
+  .cases{margin-top:2.6rem;display:grid;grid-template-columns:1fr 1fr;gap:1rem;}
+  .case{border:1px solid var(--border);border-radius:4px;padding:1.6rem 1.6rem 1.4rem;background:var(--dark);}
+  .case-cat{font-size:11px;font-weight:700;letter-spacing:0.1em;color:var(--red);}
+  .case h3{font-size:15.5px;font-weight:700;line-height:1.5;margin:0.35rem 0 0.7rem;}
+  .case ul{list-style:none;}
+  .case li{font-size:13px;color:rgba(255,255,255,0.7);line-height:1.75;padding-left:1.1rem;position:relative;margin-bottom:0.25rem;}
+  .case li::before{content:'—';position:absolute;left:0;color:var(--red);font-size:11px;top:3px;}
+  .note{font-size:12px;color:var(--dim);margin-top:1rem;}
+
+  /* PLAN */
+  .plan{margin-top:2.4rem;display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;}
+  .plan-col{background:var(--surface2);border-top:3px solid var(--red);padding:1.6rem 1.5rem;border-radius:0 0 4px 4px;}
+  .plan-when{font-family:var(--display);font-size:1.7rem;letter-spacing:0.04em;line-height:1;}
+  .plan-goal{font-size:12px;color:var(--red);font-weight:700;margin:0.35rem 0 0.9rem;}
+  .plan-col ul{list-style:none;}
+  .plan-col li{font-size:13px;color:rgba(255,255,255,0.74);line-height:1.75;padding-left:1.1rem;position:relative;margin-bottom:0.45rem;}
+  .plan-col li::before{content:'·';position:absolute;left:0.2rem;color:var(--red);font-weight:900;}
+
+  /* CAMPAIGNS */
+  .camp-grid{margin-top:2.4rem;display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;}
+  .camp{background:var(--surface2);border:1px solid var(--border);border-radius:4px;overflow:hidden;display:flex;flex-direction:column;}
+  .camp-img{height:190px;background:#222;overflow:hidden;}
+  .camp-img img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .4s;}
+  .camp:hover .camp-img img{transform:scale(1.04);}
+  .camp-body{padding:1.2rem 1.3rem 1.4rem;display:flex;flex-direction:column;flex:1;}
+  .camp-meta{font-size:11px;color:var(--dim);font-weight:500;}
+  .camp h3{font-size:14.5px;font-weight:700;line-height:1.5;margin:0.3rem 0 0.5rem;}
+  .camp-award{display:inline-block;font-size:11px;font-weight:700;color:#F4C842;margin-bottom:0.5rem;}
+  .camp p{font-size:12.5px;color:var(--muted);line-height:1.75;}
+  .camp p b{color:rgba(255,255,255,0.88);font-weight:700;}
+  .more{margin-top:1.6rem;}
+
+  /* CAREER */
+  .career{margin-top:2.2rem;}
+  .career-row{display:grid;grid-template-columns:150px 200px 1fr;gap:1.6rem;padding:1.4rem 0;border-bottom:1px solid var(--border);align-items:start;}
+  .career-row:first-child{border-top:1px solid var(--border);}
+  .c-period{font-size:12px;color:var(--dim);padding-top:2px;}
+  .c-co{font-size:15px;font-weight:700;line-height:1.4;}
+  .c-co small{display:block;font-size:12px;font-weight:400;color:var(--muted);margin-top:2px;}
+  .c-now{display:inline-block;background:var(--red);color:#fff;font-size:9px;font-weight:700;letter-spacing:0.08em;padding:2px 7px;border-radius:2px;margin-left:6px;vertical-align:middle;}
+  .c-gain{font-size:13px;color:rgba(255,255,255,0.72);line-height:1.8;}
+  .c-gain .area{display:inline-block;font-size:10.5px;font-weight:700;letter-spacing:0.05em;color:var(--text);border:1px solid var(--red-md);border-radius:2px;padding:1px 8px;margin:0 6px 6px 0;}
+  .c-gain .brands{display:block;font-size:12px;color:var(--dim);margin-top:2px;}
+
+  /* RECOGNITION */
+  .rec{margin-top:2.2rem;display:grid;grid-template-columns:1fr 1fr;gap:0 3rem;}
+  .rec-item{display:flex;gap:1.2rem;padding:1.1rem 0;border-bottom:1px solid var(--border);align-items:flex-start;}
+  .rec-year{font-family:var(--display);font-size:1.5rem;color:var(--red);min-width:50px;line-height:1.1;}
+  .rec-title{font-size:13.5px;font-weight:700;line-height:1.55;}
+  .rec-title a{text-decoration:none;border-bottom:1px solid rgba(255,255,255,0.25);}
+  .rec-title a:hover{color:var(--red);border-color:var(--red);}
+  .rec-sub{font-size:12px;color:var(--muted);margin-top:2px;}
+
+  /* CLOSING */
+  .closing{background:var(--dark);text-align:center;padding:110px 6vw;position:relative;overflow:hidden;}
+  .closing::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 60% at 50% 50%,rgba(229,0,27,0.08) 0%,transparent 70%);}
+  .closing h2{font-size:clamp(1.6rem,3.4vw,2.7rem);font-weight:900;letter-spacing:-0.03em;line-height:1.35;margin-bottom:1.3rem;position:relative;}
+  .closing h2 em{font-style:normal;color:var(--red);}
+  .closing p{color:var(--muted);font-size:14px;max-width:640px;margin:0 auto 2rem;line-height:1.9;position:relative;}
+  .closing .btn-row{justify-content:center;position:relative;}
+
+  footer{background:var(--surface);border-top:1px solid var(--border);padding:1.8rem 6vw;display:flex;justify-content:space-between;align-items:center;gap:1rem;}
+  footer .logo{font-family:var(--display);font-size:18px;}
+  footer .logo span{color:var(--red);}
+  footer p{font-size:12px;color:var(--dim);}
+
+  @media (max-width:1024px){
+    .camp-grid{grid-template-columns:1fr 1fr;}
+    .career-row{grid-template-columns:130px 1fr;}
+    .career-row .c-gain{grid-column:1/-1;}
+  }
+  @media (max-width:768px){
+    nav{padding:0 16px;}
+    .nav-links li:not(:last-child){display:none;}
+    .hero{grid-template-columns:1fr;min-height:auto;}
+    .hero-right{height:340px;order:-1;margin-top:0;}
+    .hero-overlay{background:linear-gradient(to top,var(--dark) 0%,transparent 45%);}
+    .hero-left{padding:1rem 16px 3.5rem;}
+    section{padding:60px 16px;}
+    .fit-row{grid-template-columns:1fr;gap:0.5rem;}
+    .fit-num{font-size:1.5rem;}
+    .thesis,.cases,.plan,.camp-grid,.rec{grid-template-columns:1fr;}
+    .career-row{grid-template-columns:1fr;gap:0.3rem;}
+    .closing{padding:80px 16px;}
+    footer{flex-direction:column;text-align:center;padding:1.4rem 16px;}
+  }
+  @media (max-width:480px){
+    .hero-stats{gap:1.1rem 1.6rem;}
+    .stat-num{font-size:2rem;}
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a class="nav-logo" href="#">KWON <span>YW</span></a>
+  <ul class="nav-links">
+    <li><a href="#fit">Role Fit</a></li>
+    <li><a href="#ai">AI × Marketing</a></li>
+    <li><a href="#plan">90 Days</a></li>
+    <li><a href="#campaigns">캠페인</a></li>
+    <li><a href="#career">경력</a></li>
+    <li><a class="nav-cta" href="https://www.linkedin.com/in/yongwook-kwon-16a067140/" target="_blank" rel="noopener">LinkedIn</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-left">
+    <div class="hero-badge">Marketing Business Leader · for THE SMC</div>
+    <p class="hero-lead">소셜과 크리에이터가 만든 콘텐츠가<br><em>AI의 답변</em>이 되는 시대,<br>마케팅부문의 다음 성장을 연결하겠습니다.</p>
+    <h1 class="hero-name">KWON YONGWOOK <small>권용욱</small></h1>
+    <p class="hero-role">Director · Project Manager, Data Intelligence · Publicis Groupe Korea</p>
+    <p class="hero-desc">BTL에서 시작해 디지털, 글로벌 IMC, 그리고 지금의 데이터·AI까지 — 마케팅부문 각 본부가 하는 일을 6개 대행사에서 직접 해왔습니다. 그 경험 위에서 <strong>AI부문의 역량이 광고주 제안과 매출로 이어지는 구조</strong>를 만드는 것이 제가 그리는 역할입니다.</p>
+    <div class="hero-stats">
+      <div><span class="stat-num">11<span>+</span></span><span class="stat-label">Years · 6 Agencies</span></div>
+      <div><span class="stat-num">24</span><span class="stat-label">Countries Global Rollout</span></div>
+      <div><span class="stat-num">2</span><span class="stat-label">디지털광고대상 대상·금상</span></div>
+      <div><span class="stat-num">15<span>+</span></span><span class="stat-label">Brands</span></div>
+    </div>
+    <div class="btn-row">
+      <a class="btn primary" href="#fit">이 포지션에 맞는 이유 ↓</a>
+      <a class="btn" href="https://enthusiast-marketing.github.io/AE_Kwonyongwook/" target="_blank" rel="noopener">전체 포트폴리오 ↗</a>
+      <a class="btn" href="https://brunch.co.kr/@woogake2" target="_blank" rel="noopener">Brunch ↗</a>
+    </div>
+  </div>
+  <div class="hero-right">
+    <img class="hero-photo" fetchpriority="high" src="https://enthusiast-marketing.github.io/AE_Kwonyongwook/img/profile-hero.webp" alt="권용욱 프로필 사진">
+    <div class="hero-overlay"></div>
+  </div>
+</div>
+
+<!-- ROLE FIT -->
+<section class="alt" id="fit">
+  <span class="label">Role Fit</span>
+  <h2 class="title">공고가 찾는 리더, 그리고 제 경험</h2>
+  <p class="intro">마케팅부문 대표·부대표 포지션의 요건을 하나씩 놓고, 제가 실제로 해온 일로 답했습니다.</p>
+
+  <div class="fit">
+    <div class="fit-row">
+      <div class="fit-num">01</div>
+      <div class="fit-req"><small>요건</small>주요 브랜드의 전략과 실행을 이끌고, 성과를 직접 만들어본 경험</div>
+      <div class="fit-proof"><span class="tag">대상</span>LG전자 H&amp;A 건강관리 가전 글로벌 캠페인 — <b>24개국 동시 진행</b>, 2021 대한민국 디지털광고대상 전 부문 대상(과기정통부 장관상). <span class="tag">금상</span>유럽 6개국 #CareForWhatYouWear로 2022 글로벌캠페인 부문 금상. 이 밖에 Mercedes-Benz, Volkswagen, BMW MINI, 상쾌환, BRITA까지 자동차·가전·FMCG·게임 카테고리에서 전략부터 실행까지 맡아왔습니다.</div>
+    </div>
+    <div class="fit-row">
+      <div class="fit-num">02</div>
+      <div class="fit-req"><small>요건</small>광고주 핵심 의사결정자와 소통하며 제안·협상·이슈 해결을 책임진 경험</div>
+      <div class="fit-proof">카카오게임즈 중급 타이틀 <b>연간 대행사 선정 PT를 수주</b>했습니다 — 컨셉 개발부터 기획서 작성, 발표까지 직접 맡았습니다. LG전자 글로벌 캠페인에서는 <b>24개국 현지 법인</b>과 커뮤니케이션·어댑테이션을 조율했고, 지금은 제약·소비재·리빙 광고주를 대상으로 GEO 진단 결과를 발표하고 워크숍을 진행하고 있습니다.</div>
+    </div>
+    <div class="fit-row">
+      <div class="fit-num">03</div>
+      <div class="fit-req"><small>요건</small>복잡한 문제의 핵심을 빠르게 파악하고, 과제를 스스로 정의해 성과까지 이끄는 힘</div>
+      <div class="fit-proof">"AI가 우리 브랜드를 어떻게 말하는가"라는 막연한 질문을 측정 가능한 과제로 바꿨습니다. 실제 소비자 질문 41개를 5개 AI 엔진에 돌려 <b>3,255개 응답을 감사</b>하고, 이를 해석할 자체 지표 <b>CARE+ Index</b>를 설계해 고객 여정 단계별로 어디가 비어 있는지 진단했습니다.</div>
+    </div>
+    <div class="fit-row">
+      <div class="fit-num">04</div>
+      <div class="fit-req"><small>요건</small>본부장의 전문성과 자율성을 존중하면서, 이견을 조율해 공동 성과를 만드는 리더십</div>
+      <div class="fit-proof">BTL 프로모션, 디지털 플랫폼 구축, 브랜드 IMC, 글로벌 캠페인, 데이터 분석까지 — <b>각 본부가 매일 하는 일을 직접 해본 사람</b>이라 각자의 판단 근거를 이해합니다. 제 역할은 본부의 방식을 바꾸는 게 아니라, 본부 사이의 연결점을 찾아 하나의 제안으로 묶는 것이라고 생각합니다.</div>
+    </div>
+    <div class="fit-row">
+      <div class="fit-num">05</div>
+      <div class="fit-req"><small>요건</small>소셜미디어와 AI가 가져오는 변화에 자신의 전문성을 확장해갈 수 있는 분</div>
+      <div class="fit-proof">대행사 AE에서 출발해 지금은 Publicis Groupe Korea <b>Data Intelligence</b> 소속 Director로 GEO/AEO 실무를 하고 있습니다. 매드타임스에 GEO 시대의 구조 변화를 기고했고, 브런치 연재와 KOBACO 광고기획 강의로 현업과 업계에 관점을 나누고 있습니다.</div>
+    </div>
+    <div class="fit-row">
+      <div class="fit-num">06</div>
+      <div class="fit-req"><small>요건</small>프로젝트 수행과 함께 조직 운영, 매출, 수익성에 대한 책임</div>
+      <!-- TODO(권용욱): 이 행은 숫자가 들어가야 가장 강해집니다. 예) 담당 광고주 연 취급액, 직접 이끈 인원, 수주 건수·금액 -->
+      <div class="fit-proof">상쾌환 하반기 IMC 캠페인을 <b>총괄 기획</b>(ATL·디지털·BTL 통합)했고, BRITA 코리아 2025 브랜딩 캠페인은 <b>전략 수립을 리드</b>하며 성과 측정까지 맡았습니다. 캠페인·프로젝트 단위로 일정과 협력사, 제작 파트너를 책임지고 운영해왔고, 이 경험을 부문 단위의 운영과 수익성 관리로 넓히고 싶습니다.</div>
+    </div>
+  </div>
+</section>
+
+<!-- AI x MARKETING -->
+<section id="ai">
+  <span class="label">AI × Marketing</span>
+  <h2 class="title">더에스엠씨의 콘텐츠는<br>AI가 인용하는 원천이 될 수 있습니다</h2>
+  <p class="intro">AI 답변은 커뮤니티, 영상, 리뷰처럼 <strong>사람이 만든 콘텐츠</strong>를 근거로 삼습니다. 소셜·크리에이터 콘텐츠를 가장 많이 만드는 회사가 GEO/AEO까지 갖추면, "콘텐츠를 만드는 회사"에서 <strong>"AI 시대의 브랜드 가시성을 설계하는 회사"</strong>로 제안의 무게가 달라진다고 봅니다. 마케팅부문에서 이 연결을 이렇게 만들고 싶습니다.</p>
+
+  <div class="thesis">
+    <div class="thesis-step">
+      <div class="k">01 · Measure</div>
+      <h3>AI 답변 속 브랜드를 진단</h3>
+      <p>광고주 카테고리의 실제 질문으로 AI 답변을 수집하고, 브랜드가 언급되는지, 어떤 출처가 인용되는지를 숫자로 보여줍니다. 제안의 첫 장이 됩니다.</p>
+    </div>
+    <div class="thesis-step">
+      <div class="k">02 · Create</div>
+      <h3>인용되는 콘텐츠를 설계</h3>
+      <p>진단에서 비어 있는 질문과 출처를 소셜·크리에이터·PR 본부의 콘텐츠 기획으로 연결합니다. LENS로 고른 크리에이터의 콘텐츠가 AI 답변의 근거가 되도록 설계합니다.</p>
+    </div>
+    <div class="thesis-step">
+      <div class="k">03 · Prove</div>
+      <h3>성과를 다시 측정</h3>
+      <p>조회수·도달에 더해 AI 언급률과 인용 점유율을 리포트에 넣습니다. 측정할 수 있어야 재계약과 확대 제안이 쉬워집니다.</p>
+    </div>
+  </div>
+
+  <div class="cases">
+    <div class="case">
+      <div class="case-cat">제약 · 비만치료제</div>
+      <h3>AI 답변 감사와 자체 지표 CARE+ Index 설계</h3>
+      <ul>
+        <li>실제 환자 질문 41개 × AI 엔진 5개 = 3,255개 응답 분석</li>
+        <li>Category Entry · Advantage · Reputation · Evidence + 유지관리 단계로 구성한 진단 지표 설계</li>
+        <li>여정 3단계별 갭에 맞춰 연결·재구성·확장 전략과 6단계 실행 사이클 제안</li>
+      </ul>
+    </div>
+    <div class="case">
+      <div class="case-cat">규제 산업 · 궐련형 전자담배</div>
+      <h3>광고가 막힌 카테고리의 AI 가시성 전략</h3>
+      <ul>
+        <li>AEO/GEO 마스터플랜과 프롬프트 티어 체계, 프로젝트 로드맵 수립</li>
+        <li>커뮤니티 인용 분석으로 AI가 참고하는 출처 구조 진단</li>
+        <li>광고주 대상 'From Search to AI Visibility' 워크숍 발표 기획</li>
+      </ul>
+    </div>
+    <div class="case">
+      <div class="case-cat">생활가전 · 정수기 필터</div>
+      <h3>CEP 기반 AEO 감사와 가시성 대시보드</h3>
+      <ul>
+        <li>Consumer Entry Point별 프롬프트 맵 설계와 AI 랭크 트래킹 분석</li>
+        <li>브랜드 가시성·점유율·인용 출처를 한눈에 보는 감사 대시보드 구축</li>
+        <li>같은 브랜드의 2025 디지털 브랜딩 캠페인 전략 리드 경험과 연결</li>
+      </ul>
+    </div>
+    <div class="case">
+      <div class="case-cat">헬스케어 · 리빙 · 뷰티 · 펫</div>
+      <h3>카테고리별 GEO 진단과 신규 제안</h3>
+      <ul>
+        <li>검색 의도 데이터로 만든 CEP 프롬프트뱅크 (예: 23개 CEP · 51개 프롬프트 · 5단계 여정)</li>
+        <li>CARE+ 구조를 카테고리에 맞게 바꿔 재사용하는 진단 템플릿</li>
+        <li>리빙 브랜드 대상 발표에서 진단 · 과제 · 전략 액션 파트 담당</li>
+      </ul>
+    </div>
+  </div>
+  <p class="note">* 현재 진행 중인 광고주 업무로, 브랜드명은 카테고리로 표기했습니다.</p>
+</section>
+
+<!-- 90 DAYS -->
+<section class="alt" id="plan">
+  <span class="label">First 90 Days</span>
+  <h2 class="title">입사하면 먼저 해보고 싶은 것</h2>
+  <p class="intro">바깥에서 본 가설입니다. 본부장들과 이야기하며 가장 먼저 검증하고 고치겠습니다.</p>
+  <div class="plan">
+    <div class="plan-col">
+      <div class="plan-when">Day 1–30</div>
+      <div class="plan-goal">듣고, 숫자로 이해하기</div>
+      <ul>
+        <li>10개 사업본부장 1:1 미팅 — 강점, 고민, 본부 간 협업이 막히는 지점</li>
+        <li>주요 광고주별 매출·수익성·재계약 흐름 파악</li>
+        <li>AI부문(IMN · LENS · AEO·GEO)과 커머스부문의 현재 역량과 활용 현황 확인</li>
+      </ul>
+    </div>
+    <div class="plan-col">
+      <div class="plan-when">Day 31–60</div>
+      <div class="plan-goal">연결 제안 패키지 만들기</div>
+      <ul>
+        <li>기존 광고주용 "AI 가시성 진단" 패키지를 본부 공통 제안 모듈로 정리</li>
+        <li>소셜·크리에이터 캠페인 리포트에 AI 언급률·인용 지표 추가</li>
+        <li>커머스부문과 함께 커머스 성과까지 이어질 광고주 후보 선정</li>
+      </ul>
+    </div>
+    <div class="plan-col">
+      <div class="plan-when">Day 61–90</div>
+      <div class="plan-goal">작게 증명하고 넓히기</div>
+      <ul>
+        <li>본부 공동 파일럿 제안 2~3건 진행</li>
+        <li>파일럿 결과를 케이스로 만들어 신규 영업과 업계 포럼에 활용</li>
+        <li>다음 분기 부문 목표와 본부별 KPI 연결 방안 합의</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- CAMPAIGNS -->
+<section id="campaigns">
+  <span class="label">Selected Work</span>
+  <h2 class="title">대표 캠페인 — 리더의 관점으로</h2>
+  <p class="intro">무엇을 만들었는지보다, 그 일에서 어떤 판을 짜고 누구와 조율했는지를 중심으로 골랐습니다.</p>
+  <div class="camp-grid">
+    <div class="camp">
+      <div class="camp-img"><img loading="lazy" src="https://enthusiast-marketing.github.io/AE_Kwonyongwook/img/lg-ha-2021-healthy-home.webp" alt="LG전자 H&A 2021 건강관리 가전 글로벌 캠페인"></div>
+      <div class="camp-body">
+        <span class="camp-meta">HSAD · 2021 · Global 24개국</span>
+        <h3>LG전자 H&amp;A 건강관리 가전 글로벌 캠페인 / 메타버스</h3>
+        <span class="camp-award">🏆 디지털광고대상 전 부문 대상</span>
+        <p>캠페인 컨셉과 히어로 필름, 동물의 숲·포트나이트 속 브랜드 공간까지 기획. <b>24개국 법인 커뮤니케이션과 어댑테이션</b>을 조율했습니다.</p>
+      </div>
+    </div>
+    <div class="camp">
+      <div class="camp-img"><img loading="lazy" src="https://enthusiast-marketing.github.io/AE_Kwonyongwook/img/lg-ha-2022-cfwyw-hero.webp" alt="LG전자 #CareForWhatYouWear 캠페인"></div>
+      <div class="camp-body">
+        <span class="camp-meta">HSAD · 2022 · Europe 6개국</span>
+        <h3>LG전자 의류관리 가전 #CareForWhatYouWear</h3>
+        <span class="camp-award">🥇 디지털광고대상 글로벌캠페인 금상</span>
+        <p>히어로 필름, 틱톡 챌린지, 캠페인 사이트를 하나의 흐름으로 설계하고 <b>유럽 6개국 현지화</b>를 운영했습니다.</p>
+      </div>
+    </div>
+    <div class="camp">
+      <div class="camp-img"><img loading="lazy" src="https://enthusiast-marketing.github.io/AE_Kwonyongwook/img/sangkwaehwan-2023-kv.webp" alt="상쾌환 2023 하반기 IMC 캠페인"></div>
+      <div class="camp-body">
+        <span class="camp-meta">HSAD · 2023 · IMC</span>
+        <h3>상쾌환 하반기 IMC 캠페인 '취사단'</h3>
+        <p><b>캠페인 총괄 기획.</b> ATL·디지털·BTL을 하나의 컨셉으로 묶고, TVC부터 AR 필터 SNS 이벤트까지 통합 실행했습니다.</p>
+      </div>
+    </div>
+    <div class="camp">
+      <div class="camp-img"><img loading="lazy" src="https://enthusiast-marketing.github.io/AE_Kwonyongwook/img/brita-2025-kv.webp" alt="BRITA 코리아 2025 브랜딩 캠페인"></div>
+      <div class="camp-body">
+        <span class="camp-meta">Publicis Groupe Korea · 2025 · Digital</span>
+        <h3>BRITA 코리아 2025 브랜딩 캠페인</h3>
+        <p><b>전략 수립 리드.</b> CEP 분석으로 타깃 채널을 매핑하고, 인플루언서 선정부터 크리에이티브 운영, 성과 측정까지 맡았습니다.</p>
+      </div>
+    </div>
+    <div class="camp">
+      <div class="camp-img"><img loading="lazy" src="https://enthusiast-marketing.github.io/AE_Kwonyongwook/img/benz-eq-power-gle.webp" alt="Mercedes-Benz EQ Power 캠페인"></div>
+      <div class="camp-body">
+        <span class="camp-meta">Leo Burnett Korea · 2020 · Sales Boost</span>
+        <h3>Mercedes-Benz EQ Power PHEV Offensive</h3>
+        <p>키 비주얼·카피 개발과 함께 <b>카카오톡 인앱 광고 → 시승 신청 → 프로모션 이벤트</b>로 이어지는 판매 동선을 설계했습니다.</p>
+      </div>
+    </div>
+    <div class="camp">
+      <div class="camp-img"><img loading="lazy" src="https://enthusiast-marketing.github.io/AE_Kwonyongwook/img/kakaogames-annual-plan-pt.webp" alt="카카오게임즈 연간 대행사 선정 PT"></div>
+      <div class="camp-body">
+        <span class="camp-meta">Makeulike · 2018 · New Business</span>
+        <h3>카카오게임즈 중급 타이틀 연간 대행사 PT</h3>
+        <span class="camp-award">✔ PT 수주</span>
+        <p>컨셉 개발, 콘텐츠 아이데이션, 기획서 작성과 <b>발표까지 직접 맡아 연간 계약을 따냈습니다.</b></p>
+      </div>
+    </div>
+  </div>
+  <div class="more"><a class="btn" href="https://enthusiast-marketing.github.io/AE_Kwonyongwook/#projects" target="_blank" rel="noopener">전체 캠페인 25건 보기 ↗</a></div>
+</section>
+
+<!-- CAREER -->
+<section class="alt" id="career">
+  <span class="label">Career</span>
+  <h2 class="title">각 단계에서 쌓은 것</h2>
+  <p class="intro">회사를 옮길 때마다 마케팅의 다른 영역을 하나씩 익혔습니다. 마케팅부문의 여러 본부를 이해하는 바탕이 됐습니다.</p>
+  <div class="career">
+    <div class="career-row">
+      <div class="c-period">2024.09 — 현재</div>
+      <div class="c-co">Publicis Groupe Korea<span class="c-now">NOW</span><small>Director · Project Manager, Data Intelligence</small></div>
+      <div class="c-gain"><span class="area">데이터 · AI</span><span class="area">GEO / AEO</span>AI 답변 속 브랜드 가시성을 진단하고 전략으로 바꾸는 일. 제약·소비재·리빙 광고주 GEO 프로젝트와 BRITA 코리아 브랜딩 캠페인 리드.<span class="brands">BRITA · 제약 · 소비재 · 리빙</span></div>
+    </div>
+    <div class="career-row">
+      <div class="c-period">2021.06 — 2024.08</div>
+      <div class="c-co">HSAD<small>CC3팀 책임</small></div>
+      <div class="c-gain"><span class="area">글로벌 캠페인</span><span class="area">IMC 총괄</span>24개국 글로벌 캠페인과 국내 IMC 총괄. 대한민국 디지털광고대상 대상·금상.<span class="brands">LG전자 H&amp;A · 상쾌환</span></div>
+    </div>
+    <div class="career-row">
+      <div class="c-period">2018.09 — 2021.05</div>
+      <div class="c-co">Leo Burnett Korea<small>Account Manager</small></div>
+      <div class="c-gain"><span class="area">브랜드 전략</span><span class="area">광고 · 퍼포먼스</span>글로벌 자동차 브랜드의 런칭·세일즈 캠페인, 콘텐츠 전략, 브랜드 콜라보레이션.<span class="brands">Mercedes-Benz · Volkswagen</span></div>
+    </div>
+    <div class="career-row">
+      <div class="c-period">2017.05 — 2018.08</div>
+      <div class="c-co">Makeulike<small>대리</small></div>
+      <div class="c-gain"><span class="area">디지털 플랫폼</span><span class="area">신규 수주</span>캠페인 사이트와 디지털 캠페인 기획, 연간 대행사 PT 수주. 웹어워드코리아 최우수상.<span class="brands">카카오게임즈 · BMW · 미래엔</span></div>
+    </div>
+    <div class="career-row">
+      <div class="c-period">2015.04 — 2017.04</div>
+      <div class="c-co">Creative Lounge<small>대리</small></div>
+      <div class="c-gain"><span class="area">BTL · 브랜드 경험</span>모터쇼, 플리마켓, O2O 이벤트 — 소비자를 직접 만나는 현장 기획과 운영.<span class="brands">BMW MINI · Stella Artois</span></div>
+    </div>
+    <div class="career-row">
+      <div class="c-period">2013.09 — 2014.01</div>
+      <div class="c-co">대홍기획<small>AS3팀 인턴</small></div>
+      <div class="c-gain"><span class="area">출발점</span>종합 광고대행사에서 광고 일을 시작했습니다.<span class="brands">세븐럭카지노 · 쿠쿠전자</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- RECOGNITION -->
+<section id="recognition">
+  <span class="label">Recognition &amp; Activities</span>
+  <h2 class="title">수상 · 활동 · 학력</h2>
+  <div class="rec">
+    <div>
+      <div class="rec-item"><div class="rec-year">2021</div><div><div class="rec-title">대한민국 디지털광고대상 — 전 부문 대상 (과기정통부 장관상)</div><div class="rec-sub">LG전자 H&amp;A 건강관리 가전 글로벌 캠페인 / 메타버스 · HSAD</div></div></div>
+      <div class="rec-item"><div class="rec-year">2022</div><div><div class="rec-title">대한민국 디지털광고대상 — 글로벌캠페인 부문 금상</div><div class="rec-sub">LG전자 H&amp;A #CareForWhatYouWear · HSAD</div></div></div>
+      <div class="rec-item"><div class="rec-year">2018</div><div><div class="rec-title">웹어워드코리아 — 브랜드 프로모션 부문 최우수상</div><div class="rec-sub">BMW DO MORE Campaign Site · Makeulike</div></div></div>
+      <div class="rec-item"><div class="rec-year">2024</div><div><div class="rec-title">YouTube Works Award 심사위원</div><div class="rec-sub">업계 크리에이티브 유효성 심사</div></div></div>
+    </div>
+    <div>
+      <div class="rec-item"><div class="rec-year">2026</div><div><div class="rec-title"><a href="https://www.madtimes.co.kr/news/articleView.html?idxno=28110" target="_blank" rel="noopener">기고 · AI가 검색을 삼킨 뒤, 마케팅의 지형이 바뀌고 있다</a></div><div class="rec-sub">매드타임스 · 필명 광고기획자K · GEO 시대 6가지 구조적 변화</div></div></div>
+      <div class="rec-item"><div class="rec-year">2026</div><div><div class="rec-title"><a href="https://www.madtimes.co.kr/news/articleView.html?idxno=28197" target="_blank" rel="noopener">기고 · AI가 모든 콘텐츠를 만들 수 있게 되면, 우리는 무엇에 감동하게 될까</a></div><div class="rec-sub">매드타임스 · 필명 광고기획자K</div></div></div>
+      <div class="rec-item"><div class="rec-year">Now</div><div><div class="rec-title">KOBACO 광고기획 강의 · 브런치 연재</div><div class="rec-sub">광고·브랜드 전략, GEO/AEO · brunch.co.kr/@woogake2</div></div></div>
+      <div class="rec-item"><div class="rec-year">2026</div><div><div class="rec-title">연세대학교 언론홍보대학원 광고PR 전공 석사</div><div class="rec-sub">세종대학교 디지털콘텐츠학과 / 신문방송학과 복수전공 · IAA Diploma</div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CLOSING -->
+<div class="closing">
+  <h2>AI부문이 만든 역량이<br><em>광고주의 성과</em>가 되는 길,<br>마케팅부문에서 만들겠습니다.</h2>
+  <p>현장의 실행력과 AI 시대의 측정 방법을 함께 갖춘 리더로서, 본부들의 강점을 지키면서 더에스엠씨 마케팅 사업의 다음 성장을 함께 만들고 싶습니다.</p>
+  <div class="btn-row">
+    <a class="btn primary" href="https://www.linkedin.com/in/yongwook-kwon-16a067140/" target="_blank" rel="noopener">LinkedIn에서 연락하기</a>
+    <a class="btn" href="https://enthusiast-marketing.github.io/AE_Kwonyongwook/" target="_blank" rel="noopener">전체 포트폴리오 ↗</a>
+  </div>
+</div>
+
+<footer>
+  <div class="logo">KWON <span>YONGWOOK</span></div>
+  <p>더에스엠씨 마케팅부문 리더 포지션 지원을 위해 구성한 페이지입니다 · 2026.11</p>
+</footer>
+
+</body>
+</html>
