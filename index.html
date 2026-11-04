@@ -86,6 +86,22 @@
   .case li::before{content:'—';position:absolute;left:0;color:var(--red);font-size:11px;top:3px;}
   .note{font-size:12px;color:var(--dim);margin-top:1rem;}
 
+  /* WRITING */
+  .articles{margin-top:2.4rem;display:grid;grid-template-columns:1fr 1fr;gap:1rem;}
+  .article{display:flex;flex-direction:column;background:var(--surface2);border:1px solid var(--border);border-left:3px solid var(--red);border-radius:4px;padding:1.8rem 1.8rem 1.6rem;text-decoration:none;transition:border-color .2s,background .2s;}
+  .article:hover{background:#1E1E1E;border-color:var(--red-md);border-left-color:var(--red);}
+  .article-meta{font-size:11.5px;color:var(--dim);font-weight:500;letter-spacing:0.02em;}
+  .article-meta b{color:var(--red);font-weight:700;}
+  .article h3{font-size:16.5px;font-weight:700;line-height:1.55;margin:0.5rem 0 0.3rem;}
+  .article-sub{font-size:13px;color:var(--muted);margin-bottom:1rem;}
+  .article-points{list-style:none;margin-bottom:1.2rem;}
+  .article-points li{font-size:13px;color:rgba(255,255,255,0.72);line-height:1.75;padding-left:1.1rem;position:relative;margin-bottom:0.3rem;}
+  .article-points li::before{content:'—';position:absolute;left:0;color:var(--red);font-size:11px;top:3px;}
+  .article-why{font-size:12.5px;color:rgba(255,255,255,0.82);line-height:1.75;border-top:1px solid var(--border);padding-top:0.9rem;margin-top:auto;}
+  .article-why b{color:var(--red);}
+  .article-link{display:inline-block;margin-top:0.9rem;font-size:12px;font-weight:700;color:var(--text);}
+  .article:hover .article-link{color:var(--red);}
+
   /* PLAN */
   .plan{margin-top:2.4rem;display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;}
   .plan-col{background:var(--surface2);border-top:3px solid var(--red);padding:1.6rem 1.5rem;border-radius:0 0 4px 4px;}
@@ -158,7 +174,8 @@
     section{padding:60px 16px;}
     .fit-row{grid-template-columns:1fr;gap:0.5rem;}
     .fit-num{font-size:1.5rem;}
-    .thesis,.cases,.plan,.camp-grid,.rec{grid-template-columns:1fr;}
+    .thesis,.cases,.plan,.camp-grid,.rec,.articles{grid-template-columns:1fr;}
+    .article{padding:1.4rem 1.3rem;}
     .career-row{grid-template-columns:1fr;gap:0.3rem;}
     .closing{padding:80px 16px;}
     footer{flex-direction:column;text-align:center;padding:1.4rem 16px;}
@@ -176,6 +193,7 @@
   <ul class="nav-links">
     <li><a href="#fit">Role Fit</a></li>
     <li><a href="#ai">AI × Marketing</a></li>
+    <li><a href="#writing">기고</a></li>
     <li><a href="#plan">90 Days</a></li>
     <li><a href="#campaigns">캠페인</a></li>
     <li><a href="#career">경력</a></li>
@@ -315,8 +333,41 @@
   <p class="note">* 현재 진행 중인 광고주 업무로, 브랜드명은 카테고리로 표기했습니다.</p>
 </section>
 
+<!-- WRITING -->
+<section class="alt" id="writing">
+  <span class="label">Published Work</span>
+  <h2 class="title">AI 이후의 마케팅에 대해 쓴 글</h2>
+  <p class="intro">필명 <strong>광고기획자K</strong>로 마케팅 전문 미디어 매드타임스에 기고했습니다. 하나는 AI가 브랜드를 찾는 방식을, 다른 하나는 AI가 콘텐츠를 만드는 시대의 가치를 다뤘습니다.</p>
+  <div class="articles">
+    <a class="article" href="https://www.madtimes.co.kr/news/articleView.html?idxno=28110" target="_blank" rel="noopener">
+      <span class="article-meta"><b>매드타임스</b> · 2026.06.26 · 광고기획자K</span>
+      <h3>AI가 검색을 삼킨 뒤, 마케팅의 지형이 바뀌고 있다</h3>
+      <span class="article-sub">GEO 시대, 한국 브랜드가 직면한 6가지 구조적 변화</span>
+      <ul class="article-points">
+        <li>포털 중심의 국내 디지털 공식이 약해지고, AI가 읽을 수 있는 출처가 가시성을 가른다</li>
+        <li>공식 사이트와 영어권 출처를 다시 관리해야 하는 이유</li>
+        <li>CEP 점유율을 'AI가 우리 브랜드를 언급하는가'로 다시 측정하는 법</li>
+      </ul>
+      <p class="article-why"><b>마케팅부문과의 연결</b> — 광고·PR·소셜·퍼포먼스가 만든 콘텐츠가 AI에게 읽히는지가 이제 캠페인 성과의 일부입니다.</p>
+      <span class="article-link">기사 읽기 ↗</span>
+    </a>
+    <a class="article" href="https://www.madtimes.co.kr/news/articleView.html?idxno=28197" target="_blank" rel="noopener">
+      <span class="article-meta"><b>매드타임스</b> · 2026.07.03 · 광고기획자K</span>
+      <h3>AI가 모든 콘텐츠를 만들 수 있게 되면, 우리는 무엇에 감동하게 될까</h3>
+      <span class="article-sub">콘텐츠 산업의 미래에 대한, 지극히 개인적인 전망</span>
+      <ul class="article-points">
+        <li>AI로 잘 만든 콘텐츠가 흔해질수록, 사람의 손길이 보이는 작업의 가치가 올라간다</li>
+        <li>시장은 'AI로 효율을 높인 제작'과 '사람이 깊이를 만드는 작업'으로 양극화된다</li>
+        <li>어중간한 중간 지대의 제작이 가장 먼저 압박을 받는다</li>
+      </ul>
+      <p class="article-why"><b>마케팅부문과의 연결</b> — AI로 제작 효율을 높이면서도, 사람의 기획과 이야기로 차별화하는 것이 대행사의 다음 경쟁력이라고 봅니다.</p>
+      <span class="article-link">기사 읽기 ↗</span>
+    </a>
+  </div>
+</section>
+
 <!-- 90 DAYS -->
-<section class="alt" id="plan">
+<section id="plan">
   <span class="label">First 90 Days</span>
   <h2 class="title">입사하면 먼저 해보고 싶은 것</h2>
   <p class="intro">바깥에서 본 가설입니다. 본부장들과 이야기하며 가장 먼저 검증하고 고치겠습니다.</p>
@@ -352,7 +403,7 @@
 </section>
 
 <!-- CAMPAIGNS -->
-<section id="campaigns">
+<section class="alt" id="campaigns">
   <span class="label">Selected Work</span>
   <h2 class="title">대표 캠페인 — 리더의 관점으로</h2>
   <p class="intro">무엇을 만들었는지보다, 그 일에서 어떤 판을 짜고 누구와 조율했는지를 중심으로 골랐습니다.</p>
@@ -413,7 +464,7 @@
 </section>
 
 <!-- CAREER -->
-<section class="alt" id="career">
+<section id="career">
   <span class="label">Career</span>
   <h2 class="title">각 단계에서 쌓은 것</h2>
   <p class="intro">회사를 옮길 때마다 마케팅의 다른 영역을 하나씩 익혔습니다. 마케팅부문의 여러 본부를 이해하는 바탕이 됐습니다.</p>
@@ -452,7 +503,7 @@
 </section>
 
 <!-- RECOGNITION -->
-<section id="recognition">
+<section class="alt" id="recognition">
   <span class="label">Recognition &amp; Activities</span>
   <h2 class="title">수상 · 활동 · 학력</h2>
   <div class="rec">
@@ -463,8 +514,6 @@
       <div class="rec-item"><div class="rec-year">2025<br>2026</div><div><div class="rec-title">YouTube Works Award 예선 심사단 (2년 연속)</div><div class="rec-sub">업계 크리에이티브 유효성 심사</div></div></div>
     </div>
     <div>
-      <div class="rec-item"><div class="rec-year">2026</div><div><div class="rec-title"><a href="https://www.madtimes.co.kr/news/articleView.html?idxno=28110" target="_blank" rel="noopener">기고 · AI가 검색을 삼킨 뒤, 마케팅의 지형이 바뀌고 있다</a></div><div class="rec-sub">매드타임스 · 필명 광고기획자K · GEO 시대 6가지 구조적 변화</div></div></div>
-      <div class="rec-item"><div class="rec-year">2026</div><div><div class="rec-title"><a href="https://www.madtimes.co.kr/news/articleView.html?idxno=28197" target="_blank" rel="noopener">기고 · AI가 모든 콘텐츠를 만들 수 있게 되면, 우리는 무엇에 감동하게 될까</a></div><div class="rec-sub">매드타임스 · 필명 광고기획자K</div></div></div>
       <div class="rec-item"><div class="rec-year">Talk</div><div><div class="rec-title">강의 · 멘토링</div><div class="rec-sub">KOBACO 광고기획 강의 · 동서울대 특강 · 소셜멘토링 잇다 직무특강 · 대전과학기술대 해커톤 멘토링</div></div></div>
       <div class="rec-item"><div class="rec-year">Now</div><div><div class="rec-title">브런치 연재 — 광고기획자K</div><div class="rec-sub">광고·브랜드 전략, GEO/AEO · brunch.co.kr/@woogake2</div></div></div>
       <div class="rec-item"><div class="rec-year">2026</div><div><div class="rec-title">연세대학교 언론홍보대학원 광고PR 전공 석사</div><div class="rec-sub">세종대학교 디지털콘텐츠학과 / 신문방송학과 복수전공 · IAA Diploma</div></div></div>
